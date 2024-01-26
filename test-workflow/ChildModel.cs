@@ -20,7 +20,7 @@ namespace test_workflow
         private int Salary { get; set; }
 
         // Secrets of the child
-        private string Secrets { get; set; }
+        private string Secrets { get; set; } = string.Empty;
 
         // Gender
         public byte Gender { get; set; }

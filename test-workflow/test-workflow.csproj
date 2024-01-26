@@ -16,16 +16,13 @@
     <RepositoryUrl>https://github.com/cuongph87/test-workflow</RepositoryUrl>
 	<RepositoryType>git</RepositoryType>
 	<ReleaseNotes>https://github.com/cuongph87/test-workflow/releases</ReleaseNotes>
+	<PackageTags>sample, library</PackageTags>
 	<TargetFramework>net6.0</TargetFramework>
     <RootNamespace>test_workflow</RootNamespace>
+	<PackageReadmeFile>LICENSE.md</PackageReadmeFile>
+	<PackageReadmeFile>README.md</PackageReadmeFile>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-  </PropertyGroup>
-  <PropertyGroup>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
-  </PropertyGroup>
-  <PropertyGroup>
-    <PackageReadmeFile>LICENSE.md</PackageReadmeFile>
   </PropertyGroup>
   <ItemGroup>
     <None Include="..\LICENSE.md" Pack="true" PackagePath="" />
