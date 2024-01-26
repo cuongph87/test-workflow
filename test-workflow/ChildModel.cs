@@ -15,5 +15,8 @@ namespace test_workflow
         
         // Age of the child
         public int Age { get; set; }
+
+        // Salary
+        private int Salary { get; set; }
     }
 }
