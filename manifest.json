@@ -1,0 +1,191 @@
+{
+  "homepages": [],
+  "source_base_path": "/github/workspace/docfx",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "B1//gV20YGi0SzXggdhSYaUEngNuAVC7P1IeIYLQmIk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/logo.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/logo.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "4FUeRslE3J5syUHR8DHgjrLRUHHhGZMvnZgo/+Mfju4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "CQJUVwejoH7i2WIJgCjBVBEk2U2jXnfch7bgMeoaHVE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/examples/export_transaction_to_xdr_base64.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/examples/export_transaction_to_xdr_base64.html",
+          "hash": "5c0g2tQYyTmHT0sPeipm8z82wuaIHauJuVjVTYEKycc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/examples/generate_account_keypair.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/examples/generate_account_keypair.html",
+          "hash": "0Plg5FDosa2EVAuIxgkFBK39mVJh1Zrtv/BBCEbJvek="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/examples/get_account_balance.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/examples/get_account_balance.html",
+          "hash": "l1L8f+r1a+NQoK8pTX36BRo6JtnK6y+LuW5XE1Cf6jw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/examples/import_xdr_to_transaction_base64.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/examples/import_xdr_to_transaction_base64.html",
+          "hash": "KvINhQAu6gOPJN1Uc/P6QxEbhZewgXtkkW/iEjV9jfQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/examples/send_native_assets.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/examples/send_native_assets.html",
+          "hash": "hp84WoFLtYDLhxg/Bx7ka+yrKN7kZgNaliMQApojRvY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/index.html",
+          "hash": "YQXwmUo93yd74NSv6Kui9rwH9gXZBU+m7BzoFtHndzw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Toc",
+      "source_relative_path": "tutorials/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/toc.html",
+          "hash": "dm/g4agm9Fe+WasAqIWeAMhpbKKGKjC8G3FqHVJbkSc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 8,
+          "skipped_file_count": 0
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
