@@ -21,5 +21,8 @@ namespace test_workflow
 
         // Secrets of the child
         private string Secrets { get; set; }
+
+        // Gender
+        public byte Gender { get; set; }
     }
 }
