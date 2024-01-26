@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+  	<Authors>Cuong Pham</Authors>
+    <Description>An empty project.
+	</Description>
+
+    <!-- PackageProjectUrl is different from the repository URL. It can be a documentation
+         website or a website explaining the project -->
+    <PackageProjectUrl>https://github.com/cuongph87/test-workflow</PackageProjectUrl>
+	<GenerateDocumentationFile>True</GenerateDocumentationFile>
+	<NoWarn>$(NoWarn);CS1591</NoWarn>
+	<EnablePackageValidation>true</EnablePackageValidation>
+	<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <Copyright>Cuong Pham 2024</Copyright>
+	<PackageProjectUrl>https://github.com/cuongph87/test-workflow</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/cuongph87/test-workflow</RepositoryUrl>
+	<RepositoryType>git</RepositoryType>
+	<ReleaseNotes>https://github.com/cuongph87/test-workflow/releases</ReleaseNotes>
+	<TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>test_workflow</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="..\LICENSE.txt" Pack="true" PackagePath="" />
+  </ItemGroup>
+</Project>
