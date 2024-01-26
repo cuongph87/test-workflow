@@ -12,5 +12,8 @@ namespace test_workflow
     internal class ChildModel
     {
         public bool Growable { get; set; }
+        
+        // Age of the child
+        public int Age { get; set; }
     }
 }
