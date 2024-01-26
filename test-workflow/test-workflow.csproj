@@ -11,7 +11,6 @@
 	<GenerateDocumentationFile>True</GenerateDocumentationFile>
 	<NoWarn>$(NoWarn);CS1591</NoWarn>
 	<EnablePackageValidation>true</EnablePackageValidation>
-	<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <Copyright>Cuong Pham 2024</Copyright>
 	<PackageProjectUrl>https://github.com/cuongph87/test-workflow</PackageProjectUrl>
     <RepositoryUrl>https://github.com/cuongph87/test-workflow</RepositoryUrl>
@@ -22,7 +21,16 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
+  <PropertyGroup>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PackageReadmeFile>LICENSE.txt</PackageReadmeFile>
+  </PropertyGroup>
   <ItemGroup>
     <None Include="..\LICENSE.txt" Pack="true" PackagePath="" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\README.md" Pack="true" PackagePath="" />
   </ItemGroup>
 </Project>

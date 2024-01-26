@@ -18,5 +18,8 @@ namespace test_workflow
 
         // Salary
         private int Salary { get; set; }
+
+        // Secrets of the child
+        private string Secrets { get; set; }
     }
 }
