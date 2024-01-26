@@ -7,12 +7,10 @@ using System.Threading.Tasks;
 namespace test_workflow
 {
     /// <summary>
-    /// A base class for everything.
+    /// A class for child objects.
     /// </summary>
-    public class BaseModel
+    internal class ChildModel
     {
-        public int Id { get; set; }
-
-        public string Name { get; set; }
+        public bool Growable { get; set; }
     }
 }
