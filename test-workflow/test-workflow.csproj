@@ -2,6 +2,7 @@
 
   <PropertyGroup>
   	<Authors>Cuong Pham</Authors>
+	<Version>1.0.1</Version>
     <Description>An empty project.
 	</Description>
 
@@ -11,7 +12,7 @@
 	<GenerateDocumentationFile>True</GenerateDocumentationFile>
 	<NoWarn>$(NoWarn);CS1591</NoWarn>
 	<EnablePackageValidation>true</EnablePackageValidation>
-    <Copyright>Cuong Pham 2024</Copyright>
+    <Copyright>Copyright (c) Cuong Pham 2024</Copyright>
 	<PackageProjectUrl>https://github.com/cuongph87/test-workflow</PackageProjectUrl>
     <RepositoryUrl>https://github.com/cuongph87/test-workflow</RepositoryUrl>
 	<RepositoryType>git</RepositoryType>
@@ -23,7 +24,7 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <PropertyGroup>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageReadmeFile>nugetreadme.md</PackageReadmeFile>
   </PropertyGroup>
   <PropertyGroup>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
@@ -32,6 +33,6 @@
     <None Include="..\LICENSE.txt" Pack="true" PackagePath="" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\README.md" Pack="true" PackagePath="" />
+    <None Include="..\nugetreadme.md" Pack="true" PackagePath="" />
   </ItemGroup>
 </Project>
