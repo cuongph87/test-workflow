@@ -4,11 +4,46 @@ on:
   release:
     types:
     - published
+    
+env:
+  DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
+  DOTNET_NOLOGO: true
+  NuGetDirectory: ${{github.workspace}}/nuget
+  
 jobs:
+  create_nuget:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+    - run: dotnet pack --configuration Release --output ${{env.NuGetDirectory}} -p:PackageVersion=${{github.event.release.tag_name}}
+    - uses: actions/upload-artifact@v3
+      with:
+        name: nuget
+        if-no-files-found: error
+        retention-days: 7
+        path: ${{env.NuGetDirectory}}/*.nupkg
+
+  deploy_to_nuget:
+    if: github.event_name == 'release'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: nuget
+          path: ${{env.NuGetDirectory}}
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v4
+      - name: Publish NuGet package
+        run: |
+          foreach($file in (Get-ChildItem "${{env.NuGetDirectory}}" -Recurse -Include *.nupkg)) {
+              dotnet nuget push $file --api-key "${{secrets.NUGET_APIKEY}}" --source https://api.nuget.org/v3/index.json --skip-duplicate
+          }
   print_latest_version:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Echo
         run: |
           echo ${{github.event.release.tag_name}}
