@@ -2,7 +2,8 @@ name: Get release version
 on: 
   workflow_dispatch:
   release:
-    - created
+    types:
+    - published
 jobs:
   create_nuget:
     runs-on: ubuntu-latest
