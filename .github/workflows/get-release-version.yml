@@ -9,7 +9,9 @@ env:
   DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
   DOTNET_NOLOGO: true
   NuGetDirectory: ${{github.workspace}}/nuget
-  
+defaults:
+  run:
+    shell: pwsh
 jobs:
   create_nuget:
     runs-on: ubuntu-latest
