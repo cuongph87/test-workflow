@@ -8,5 +8,8 @@
 		// Dev overwrote
 		
 		// Dev new changes 1
+		
+		// Dev changes 3
+		public string Class { get; set; }
     }
 }
