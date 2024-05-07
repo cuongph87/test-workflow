@@ -19,7 +19,6 @@
         <ReleaseNotes>https://github.com/cuongph87/test-workflow/releases</ReleaseNotes>
         <PackageTags>sample, library</PackageTags>
         <TargetFramework>net8.0</TargetFramework>
-        <RootNamespace>test_workflow</RootNamespace>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <LangVersion>12</LangVersion>
