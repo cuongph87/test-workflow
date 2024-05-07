@@ -26,5 +26,16 @@ namespace test_workflow_test
             };
             Assert.AreEqual(1, child.Gender);
         }
+        
+        [TestMethod]
+        public void TestMethod3()
+        {
+            ChildModel child = new ChildModel(22)
+            {
+                Growable = false,
+                Gender = 1
+            };
+            Assert.AreEqual(22, child.Age);
+        }
     }
 }
