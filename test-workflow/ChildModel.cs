@@ -3,12 +3,12 @@
 /// <summary>
 ///     A class for child objects.
 /// </summary>
-public class ChildModel(int Age)
+public class ChildModel(int age)
 {
     public bool Growable { get; set; }
 
     // Age of the child
-    public int Age { get; set; }
+    public int Age { get; set; } = age;
 
     // Salary
     private int Salary { get; set; }
