@@ -1,38 +1,39 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-  	<Authors>Cuong Pham</Authors>
-	<Version>1.0.1</Version>
-    <Description>An empty project.
-	</Description>
+    <PropertyGroup>
+        <Authors>Cuong Pham</Authors>
+        <Version>1.0.1</Version>
+        <Description>An empty project.
+        </Description>
 
-    <!-- PackageProjectUrl is different from the repository URL. It can be a documentation
-         website or a website explaining the project -->
-    <PackageProjectUrl>https://github.com/cuongph87/test-workflow</PackageProjectUrl>
-	<GenerateDocumentationFile>True</GenerateDocumentationFile>
-	<NoWarn>$(NoWarn);CS1591</NoWarn>
-	<EnablePackageValidation>true</EnablePackageValidation>
-    <Copyright>Copyright (c) Cuong Pham 2024</Copyright>
-	<PackageProjectUrl>https://github.com/cuongph87/test-workflow</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/cuongph87/test-workflow</RepositoryUrl>
-	<RepositoryType>git</RepositoryType>
-	<ReleaseNotes>https://github.com/cuongph87/test-workflow/releases</ReleaseNotes>
-	<PackageTags>sample, library</PackageTags>
-	<TargetFramework>net6.0</TargetFramework>
-    <RootNamespace>test_workflow</RootNamespace>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
-  <PropertyGroup>
-    <PackageReadmeFile>nugetreadme.md</PackageReadmeFile>
-  </PropertyGroup>
-  <PropertyGroup>
-    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
-  </PropertyGroup>
-  <ItemGroup>
-    <None Include="..\LICENSE.txt" Pack="true" PackagePath="" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\nugetreadme.md" Pack="true" PackagePath="" />
-  </ItemGroup>
+        <!-- PackageProjectUrl is different from the repository URL. It can be a documentation
+             website or a website explaining the project -->
+        <PackageProjectUrl>https://github.com/cuongph87/test-workflow</PackageProjectUrl>
+        <GenerateDocumentationFile>True</GenerateDocumentationFile>
+        <NoWarn>$(NoWarn);CS1591</NoWarn>
+        <EnablePackageValidation>true</EnablePackageValidation>
+        <Copyright>Copyright (c) Cuong Pham 2024</Copyright>
+        <PackageProjectUrl>https://github.com/cuongph87/test-workflow</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/cuongph87/test-workflow</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <ReleaseNotes>https://github.com/cuongph87/test-workflow/releases</ReleaseNotes>
+        <PackageTags>sample, library</PackageTags>
+        <TargetFramework>net8.0</TargetFramework>
+        <RootNamespace>test_workflow</RootNamespace>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <LangVersion>12</LangVersion>
+    </PropertyGroup>
+    <PropertyGroup>
+        <PackageReadmeFile>nugetreadme.md</PackageReadmeFile>
+    </PropertyGroup>
+    <PropertyGroup>
+        <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    </PropertyGroup>
+    <ItemGroup>
+        <None Include="..\LICENSE.txt" Pack="true" PackagePath=""/>
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="..\nugetreadme.md" Pack="true" PackagePath=""/>
+    </ItemGroup>
 </Project>

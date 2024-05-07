@@ -1,3 +1,5 @@
+using test_workflow;
+
 namespace test_workflow_test
 {
     [TestClass]
@@ -6,6 +8,12 @@ namespace test_workflow_test
         [TestMethod]
         public void TestMethod1()
         {
+            ChildModel child = new ChildModel(10)
+            {
+                Growable = false,
+                Gender = 1
+            };
+            Assert.AreEqual(10, child.Age);
         }
     }
 }
