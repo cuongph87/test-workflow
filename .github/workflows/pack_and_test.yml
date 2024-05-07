@@ -2,6 +2,7 @@ name: Pack and Test
 on:
   push:
     branches:
+      - master
       - main
   pull_request_target:
     types:
@@ -18,8 +19,14 @@ jobs:
   pack_and_test:
     runs-on: ubuntu-latest
     steps:
+      - name: Echo github context
+        env: 
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"
       - uses: actions/checkout@v3
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
+      - name: Pack
+        run: dotnet pack --configuration Release --output ${{env.NuGetDirectory}}
       - name: Run tests
         run: dotnet test --configuration Release
