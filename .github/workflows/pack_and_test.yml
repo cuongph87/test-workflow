@@ -1,13 +1,8 @@
-name: Pack and Test
+name: Publish to Nuget
 on:
-  push:
-    branches:
-      - master
-      - main
-  pull_request_target:
+  release:
     types:
-      - opened
-      - synchronize
+      - published
 env:
   DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
   DOTNET_NOLOGO: true
@@ -16,19 +11,25 @@ defaults:
   run:
     shell: pwsh
 jobs:
-  pack_and_test:
+  create_nuget:
     runs-on: ubuntu-latest
     steps:
-      - name: Echo github context
-        env: 
-          GITHUB_CONTEXT: ${{ toJson(github) }}
-        run: echo "$GITHUB_CONTEXT"
-      - uses: actions/checkout@v4
-        with:
-          ref: ${{github.head_ref}}
+      - uses: actions/checkout@v3
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
-      - name: Pack
-        run: dotnet pack --configuration Release --output ${{env.NuGetDirectory}}
-      - name: Run tests
-        run: dotnet test --configuration Release
+      - name: Set version
+        id: set_version
+        shell: pwsh
+        run: |
+          $version = "${{github.event.release.tag_name}}"
+          if ("${{github.event.release.prerelease}}" -eq "true" -and $version -notmatch "-\w+") {
+            $version = "$version-beta"
+          }
+          echo "VERSION=$version" >> $env:GITHUB_ENV
+      - run: dotnet pack --configuration Release --output ${{env.NuGetDirectory}} -p:PackageVersion=${{env.VERSION}}
+      - uses: actions/upload-artifact@v3
+        with:
+          name: nuget
+          if-no-files-found: error
+          retention-days: 7
+          path: ${{env.NuGetDirectory}}/*.nupkg
