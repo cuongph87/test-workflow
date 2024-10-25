@@ -21,9 +21,18 @@ jobs:
         id: set_version
         shell: pwsh
         run: |
+          echo "$version"
           $version = "${{github.event.release.tag_name}}"
-          if ("${{github.event.release.prerelease}}" -eq "true" -and $version -notmatch "-\w+") {
-            $version = "$version-beta"
+          $isPrerelease = "${{github.event.release.prerelease}}" -eq "true"
+          $hasPrereleaseSuffix = $version -match "-\w+"
+          if ($isPrerelease -and -not $hasPrereleaseSuffix) {
+            Write-Error "Pre-release tag must contain a suffix (e.g., -alpha, -beta, -rc). Found: $version"
+            exit 1
+          }
+          
+          if (-not $isPrerelease -and $hasPrereleaseSuffix) {
+            Write-Error "Regular release tag must not contain a pre-release suffix. Found: $version"
+            exit 1
           }
           echo "VERSION=$version" >> $env:GITHUB_ENV
       - run: dotnet pack --configuration Release --output ${{env.NuGetDirectory}} -p:PackageVersion=${{env.VERSION}}
