@@ -9,4 +9,5 @@ public class BaseModel
 
     public string Name { get; init; }
     public int Age { get; init; }
+    public string Note { get; init; }
 }
