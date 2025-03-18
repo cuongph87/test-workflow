@@ -11,4 +11,7 @@ public class Class1
 
     // Dev changes 3
     public string Class { get; set; }
+    
+    // New property added
+	public string NewProperty { get; set; }
 }
