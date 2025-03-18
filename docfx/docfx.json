@@ -45,7 +45,7 @@
 			"_appLogoPath" : "images/logo.svg",
 			"_appFaviconPath" : "favicon",
 			"_gitContribute": {
-				"repo": "https://github.com/elucidsoft/dotnet-stellar-sdk",
+				"repo": "https://github.com/cuongph87/test-workflow",
 				"branch": "master"
 			}
 		},
