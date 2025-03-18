@@ -2,7 +2,7 @@
 	"metadata": [{
 		"src": [{
 			"files": ["**/*.csproj"],
-			"src": "../stellar-dotnet-sdk"
+			"src": "../TestWorkflow"
 		}],
 		"dest": "api",
 		"filter": "filterConfig.yml",
