@@ -1,0 +1,29 @@
+name: Build and Version
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Required for GitVersion to analyze history
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+      - name: Install GitVersion
+        run: dotnet tool install --global GitVersion.Tool
+      - name: Calculate Version
+        run: dotnet-gitversion /updateprojectfiles
+      - name: Build
+        run: dotnet build
+      - name: Commit Version Changes
+        run: |
+          git config user.name "GitHub Action"
+          git config user.email "cuongph87@github.com"
+          git add .
+          git commit -m "Bump version [skip ci]" || echo "No changes to commit"
+          git push
