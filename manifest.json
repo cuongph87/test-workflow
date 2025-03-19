@@ -9,7 +9,67 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "B1//gV20YGi0SzXggdhSYaUEngNuAVC7P1IeIYLQmIk="
+          "hash": "HTqEWt5Qu9ORffPDV+b8DymFnxfkxyjsQnApUjXCLWw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/test_workflow.BaseModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/test_workflow.BaseModel.html",
+          "hash": "ErI0xlHuadTztjrRk3uwXijtnifvf3Xz+7OydgUfOcY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/test_workflow.ChildModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/test_workflow.ChildModel.html",
+          "hash": "26vdn4l+EL/jUP/RGvdgUr91EB/HGHz6LPmbqOHgUtI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/test_workflow.Class1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/test_workflow.Class1.html",
+          "hash": "tmpGKpANeskLIOMGX77ouiLACW+E1VB1dO7pNGH5gME="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/test_workflow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/test_workflow.html",
+          "hash": "auxN8c4UX2b6cXFd9qpHljdKJZFi1L3ESBTF7vbfORM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "nOOGAKZcnDgNEq/FLZd8qOP9rS5qlrRlp89MuqEP9CQ="
         }
       },
       "is_incremental": false,
@@ -44,7 +104,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "CQJUVwejoH7i2WIJgCjBVBEk2U2jXnfch7bgMeoaHVE="
+          "hash": "gzlv0TV1bedQhfGUQCO8v4NbiHGvkTEgp5h/HEuZntE="
         }
       },
       "is_incremental": false,
@@ -116,7 +176,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorials/index.html",
-          "hash": "YQXwmUo93yd74NSv6Kui9rwH9gXZBU+m7BzoFtHndzw="
+          "hash": "CZUSsmh/0glL6R7RvTcgcdzSZiCisJ6/aUOuGWEOHM4="
         }
       },
       "is_incremental": false,
@@ -153,6 +213,12 @@
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 8,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 4,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
