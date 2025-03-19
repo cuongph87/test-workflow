@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <Authors>Cuong Pham</Authors>
-    <Version>1.4.6/Version>
+    <Version>1.4.6</Version>
     <Description>An empty project.
         </Description>
     <!-- PackageProjectUrl is different from the repository URL. It can be a documentation

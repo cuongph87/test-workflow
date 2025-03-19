@@ -6,6 +6,7 @@
 		}],
 		"dest": "api",
 		"filter": "filterConfig.yml",
+		"namespaceLayout": "nested",
 		"disableGitFeatures": true
 	}],
 	"build": {

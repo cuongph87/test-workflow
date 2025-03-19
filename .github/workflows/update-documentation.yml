@@ -20,7 +20,7 @@ jobs:
         path: docfx/_site
 
     - name: Build Documentation Metadata
-      uses: Kirbyrawr/docfx-action@master
+      uses: nunit/docfx-action@v4.0.0
       with:
         args: metadata ./docfx/docfx.json
 
