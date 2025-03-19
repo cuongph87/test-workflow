@@ -148,3 +148,35 @@ references:
   isSpec: "True"
   fullName: test_workflow.Class1.NewProperty
   nameWithType: Class1.NewProperty
+- uid: test_workflow.DummyModel
+  name: DummyModel
+  href: api/test_workflow.DummyModel.html
+  commentId: T:test_workflow.DummyModel
+  fullName: test_workflow.DummyModel
+  nameWithType: DummyModel
+- uid: test_workflow.DummyModel.Description
+  name: Description
+  href: api/test_workflow.DummyModel.html#test_workflow_DummyModel_Description
+  commentId: P:test_workflow.DummyModel.Description
+  fullName: test_workflow.DummyModel.Description
+  nameWithType: DummyModel.Description
+- uid: test_workflow.DummyModel.Description*
+  name: Description
+  href: api/test_workflow.DummyModel.html#test_workflow_DummyModel_Description_
+  commentId: Overload:test_workflow.DummyModel.Description
+  isSpec: "True"
+  fullName: test_workflow.DummyModel.Description
+  nameWithType: DummyModel.Description
+- uid: test_workflow.DummyModel.Id
+  name: Id
+  href: api/test_workflow.DummyModel.html#test_workflow_DummyModel_Id
+  commentId: P:test_workflow.DummyModel.Id
+  fullName: test_workflow.DummyModel.Id
+  nameWithType: DummyModel.Id
+- uid: test_workflow.DummyModel.Id*
+  name: Id
+  href: api/test_workflow.DummyModel.html#test_workflow_DummyModel_Id_
+  commentId: Overload:test_workflow.DummyModel.Id
+  isSpec: "True"
+  fullName: test_workflow.DummyModel.Id
+  nameWithType: DummyModel.Id
