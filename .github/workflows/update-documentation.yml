@@ -15,7 +15,6 @@ jobs:
     - name: Checkout GH pages
       uses: actions/checkout@v4
       with:
-        repository: cuongph87/test-workflow
         ref: gh-pages
         path: docfx/_site
 
