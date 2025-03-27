@@ -7,7 +7,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout SDK
+    - name: Checkout
       uses: actions/checkout@v4
       with:
         fetch-depth: 0
