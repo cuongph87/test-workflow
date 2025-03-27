@@ -36,9 +36,4 @@ jobs:
           }
           echo "VERSION=$version" >> $env:GITHUB_ENV
       - run: dotnet pack --configuration Release --output ${{env.NuGetDirectory}} -p:PackageVersion=${{env.VERSION}}
-      - uses: actions/upload-artifact@v3
-        with:
-          name: nuget
-          if-no-files-found: error
-          retention-days: 7
-          path: ${{env.NuGetDirectory}}/*.nupkg
+      
