@@ -15,4 +15,5 @@ public string Class { get; set; }
     // New property added
 	public string NewProperty { get; set; }
 public string NewProperty2 { get; set; }
+public string NewProperty3 { get; set; }
 }
