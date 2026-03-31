@@ -7,11 +7,12 @@ public class Class1
 
     // Dev overwrote again - this is dev changes 4
 
-    // Dev new changes 1
+    // Dev new changes 1 
 
     // Dev changes 3 4 5
 public string Class { get; set; }
     
     // New property added
 	public string NewProperty { get; set; }
+public string NewProperty2 { get; set; }
 }
