@@ -10,7 +10,7 @@ public class Class1
     // Dev new changes 1
 
     // Dev changes 3 4 5
-public string Class { get; init; }
+public string Class { get; set; }
     
     // New property added
 	public string NewProperty { get; set; }
