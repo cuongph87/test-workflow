@@ -1,3 +1,4 @@
+```mermaid
 flowchart TD
     start(["User taps Deposit<br/>(Beans App)"]) --> buildTx
 
@@ -76,3 +77,4 @@ flowchart TD
     style skipTerminal fill:#f5f5f5,stroke:#999,color:#666
     style awaitWebhook fill:#e3f2fd,stroke:#42a5f5,color:#1565c0
     style immediateFailure fill:#ffebee,stroke:#ef5350,color:#c62828
+```
