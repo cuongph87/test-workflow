@@ -1,3 +1,5 @@
+# Card Deposit Flow
+
 ```mermaid
 flowchart TD
     start(["User taps Deposit<br/>(Beans App)"]) --> buildTx
