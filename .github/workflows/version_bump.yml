@@ -29,18 +29,22 @@ jobs:
       - name: Update csproj versions
         run: |
           VERSION="${{ steps.version.outputs.version }}"
-          # Update StellarDotnetSdk
-          sed -i "s|<Version>.*</Version>|<Version>${VERSION}</Version>|" \
-            StellarDotnetSdk/StellarDotnetSdk.csproj
-          # Update StellarDotnetSdk.Xdr
-          sed -i "s|<Version>.*</Version>|<Version>${VERSION}</Version>|" \
-            StellarDotnetSdk.Xdr/StellarDotnetSdk.Xdr.csproj
+          # Find all packable csproj files containing a <Version> tag
+          # (skip projects explicitly marked as non-packable)
+          for csproj in $(grep -rl '<Version>' --include='*.csproj' .); do
+            if grep -q '<IsPackable>false</IsPackable>' "$csproj"; then
+              echo "Skipping non-packable: $csproj"
+              continue
+            fi
+            echo "Updating $csproj to $VERSION"
+            sed -i "s|<Version>.*</Version>|<Version>${VERSION}</Version>|" "$csproj"
+          done
 
       - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add StellarDotnetSdk/StellarDotnetSdk.csproj StellarDotnetSdk.Xdr/StellarDotnetSdk.Xdr.csproj
+          git add -A '*.csproj'
           # Only commit if there are changes
           if git diff --cached --quiet; then
             echo "No version changes needed"
