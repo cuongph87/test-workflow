@@ -1,0 +1,50 @@
+name: Version Bump
+
+on:
+  release:
+    types:
+      - published
+
+permissions:
+  contents: write
+
+jobs:
+  bump_version:
+    runs-on: ubuntu-latest
+    # Skip pre-releases to avoid bumping version for alpha/beta/rc tags
+    if: ${{ !github.event.release.prerelease }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+
+      - name: Extract version from tag
+        id: version
+        run: |
+          TAG="${{ github.event.release.tag_name }}"
+          # Strip leading 'v' if present
+          VERSION="${TAG#v}"
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Update csproj versions
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          # Update StellarDotnetSdk
+          sed -i "s|<Version>.*</Version>|<Version>${VERSION}</Version>|" \
+            StellarDotnetSdk/StellarDotnetSdk.csproj
+          # Update StellarDotnetSdk.Xdr
+          sed -i "s|<Version>.*</Version>|<Version>${VERSION}</Version>|" \
+            StellarDotnetSdk.Xdr/StellarDotnetSdk.Xdr.csproj
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add StellarDotnetSdk/StellarDotnetSdk.csproj StellarDotnetSdk.Xdr/StellarDotnetSdk.Xdr.csproj
+          # Only commit if there are changes
+          if git diff --cached --quiet; then
+            echo "No version changes needed"
+          else
+            git commit -m "chore: bump version to ${{ steps.version.outputs.version }}"
+            git push origin master
+          fi
