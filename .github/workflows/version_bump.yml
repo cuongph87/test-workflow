@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: master
+          ref: main
 
       - name: Extract version from tag
         id: version
@@ -50,5 +50,5 @@ jobs:
             echo "No version changes needed"
           else
             git commit -m "chore: bump version to ${{ steps.version.outputs.version }}"
-            git push origin master
+            git push origin main
           fi
